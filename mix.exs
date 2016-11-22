@@ -31,6 +31,8 @@ defmodule FiverTweeter.Mixfile do
     [{:credo, "~> 0.5.3"},
     {:quantum, "~> 1.8"},
     {:extwitter, "~> 0.7.2"},
-    {:oauth, github: "tim/erlang-oauth"}]
+    {:oauth, github: "tim/erlang-oauth"},
+    {:mock, "~> 0.2.0", only: :test},
+    {:mix_test_watch, "~> 0.2", only: :dev}]
   end
 end

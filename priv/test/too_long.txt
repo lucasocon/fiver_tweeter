@@ -1,5 +1,2 @@
-Line 1
-Line 2
-Line 3
 We recently had the opportunity to do so. The project was an iOS application that made heavy use of the device’s location services; users can share where they are and what they’re doing. We needed a backend for an API, and to keep all connected clients up-to-date. From the start, Phoenix and its channels seemed like a great fit. Today, we’d like to share some of what we learned.
-Line 5
+short line
