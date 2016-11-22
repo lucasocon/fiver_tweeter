@@ -1,6 +1,7 @@
 # FiverTweeter
 
-**TODO: Add description**
+FiverTweeter app that consume Twitter API.
+Built with Elixir :)
 
 ## Installation
 
@@ -22,3 +23,10 @@ If [available in Hex](https://hex.pm/docs/publish), the package can be installed
     end
     ```
 
+TODO:
+  Using Twitter API.
+    - Search specific keywords, perform actions
+    - Favorite tweets
+    - Reply
+    - Schedule from CLI  
+    - Activate/Deactivate
