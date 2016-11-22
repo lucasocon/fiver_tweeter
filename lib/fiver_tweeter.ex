@@ -9,12 +9,15 @@ defmodule FiverTweeter do
     # Define workers and child supervisors to be supervised
     children = [
       # Starts a worker by calling: FiverTweeter.Worker.start_link(arg1, arg2, arg3)
-      # worker(FiverTweeter.Worker, [arg1, arg2, arg3]),
+      worker(FiverTweeter.TweetServer, []),
     ]
 
     # See http://elixir-lang.org/docs/stable/elixir/Supervisor.html
     # for other strategies and supported options
     opts = [strategy: :one_for_one, name: FiverTweeter.Supervisor]
-    Supervisor.start_link(children, opts)
+    process = Supervisor.start_link(children, opts)
+    FiverTweeter.Scheduler.schedule_file("* * * * *", Path.join("#{:code.priv_dir(:fiver_tweeter)}", "sample.txt"))
+
+    process
   end
 end
